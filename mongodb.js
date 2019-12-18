@@ -17,10 +17,45 @@ MongoClient.connect(
     //database
     const db = client.db(databaseName);
 
-    //collection (i.e., table)
-    const usersCollection = db.collection('users');
-    usersCollection.insertOne({
-      name: 'Ajay'
-    });
+    // //collection (i.e., table)
+    // const usersCollection = db.collection('users');
+    // // method insertOne
+    // usersCollection.insertOne(
+    //   {
+    //     name: 'David'
+    //   },
+    //   (error, result) => {
+    //     if (error) {
+    //       return console.log(`Error: ${error}`);
+    //     }
+    //     console.log(result.ops);
+    //   }
+    // );
+
+    // // method insertMany
+    // const users = [
+    //   { name: 'Jen', age: 28 },
+    //   { name: 'Gunther', age: 27 }
+    // ];
+    // usersCollection.insertMany(users, (error, result) => {
+    //   if (error) {
+    //     return console.log(`Error: ${error}`);
+    //   }
+    //   console.log(result.ops);
+    // });
+
+    // // method insertMany with new collection
+    // const tasksCollection = db.collection('tasks');
+
+    // const tasks = [
+    //   { description: 'Get groceries', completed: true },
+    //   { description: 'Go to yoga', completed: false }
+    // ];
+    // tasksCollection.insertMany(tasks, (error, result) => {
+    //   if (error) {
+    //     console.log(`Error: ${error}`);
+    //   }
+    //   console.log(result.ops);
+    // });
   }
 );
